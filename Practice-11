@@ -1,0 +1,15 @@
+//Q1
+SELECT actor.first_name, customer.first_name
+FROM actor 
+FULL JOIN customer ON actor.first_name = customer.first_name;
+
+//Q2
+SELECT actor.first_name, customer.first_name
+FROM actor
+INNER JOIN customer ON actor.first_name = customer.first_name;
+
+//Q3
+SELECT DISTINCT actor.first_name
+FROM actor
+LEFT JOIN customer ON actor.first_name = customer.first_name
+WHERE customer.first_name IS NULL;
